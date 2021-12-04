@@ -1,6 +1,11 @@
 import java.io.File
+import java.util.*
 
-fun readInput(name: String): List<String> {
-    val file = File("src/main/resources/inputs", "$name.txt")
-    return file.readLines()
+
+fun readInput(name: String) = inputFile(name).useLines {
+    it.filter(String::isNotBlank).toList()
 }
+
+fun inputScanner(name: String) = Scanner(inputFile(name))
+
+private fun inputFile(name: String) = File("src/main/resources/inputs", "$name.txt")
