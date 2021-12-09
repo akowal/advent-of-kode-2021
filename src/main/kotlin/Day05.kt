@@ -39,8 +39,6 @@ object Day05 {
 
     private enum class Orientation { VERTICAL, HORIZONTAL, DIAGONAL }
 
-    private data class Point(val x: Int, val y: Int)
-
     private data class Line(
         val x1: Int,
         val y1: Int,
