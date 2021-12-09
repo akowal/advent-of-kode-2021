@@ -9,8 +9,7 @@ object Day05 {
     private val allLines = readInput("day05")
         .asSequence()
         .map { it.replace(" -> ", ",") }
-        .map { it.split(',') }
-        .map { it.map(String::toInt) }
+        .map { it.toIntArray() }
         .map { (x1, y1, x2, y2) -> Line(x1, y1, x2, y2) }
 
     fun solvePart1() = countIntersections(allLines.filter { it.orientation != DIAGONAL })

@@ -8,8 +8,7 @@ fun main() {
 object Day07 {
     private val positions = readInput("day07")
         .single()
-        .split(',')
-        .map { it.toInt() }
+        .toIntArray()
         .sorted()
 
     fun solvePart1(): Int {

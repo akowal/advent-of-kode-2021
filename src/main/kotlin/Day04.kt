@@ -6,12 +6,12 @@ fun main() {
 object Day04 {
     private const val BOARD_SIZE = 5
 
-    private val numbers: List<Int>
+    private val numbers: IntArray
     private val boards: List<Board>
 
     init {
         val input = inputScanner("day04")
-        numbers = input.nextLine().split(',').map { it.toInt() }
+        numbers = input.nextLine().toIntArray()
         boards = sequence { while (input.hasNextInt()) yield(input.nextInt()) }
             .windowed(BOARD_SIZE * BOARD_SIZE, BOARD_SIZE * BOARD_SIZE)
             .map { createBoard(it) }

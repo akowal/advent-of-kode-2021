@@ -9,8 +9,7 @@ object Day06 {
 
     private val input = readInput("day06")
         .single()
-        .split(',')
-        .map { it.toInt() }
+        .toIntArray()
 
 
     fun solvePart1() = simulate(80)
