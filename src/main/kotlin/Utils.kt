@@ -1,9 +1,9 @@
 import java.io.File
-import java.util.*
+import java.util.Scanner
 
 
 fun readInput(name: String) = inputFile(name).useLines {
-    it.filter(String::isNotBlank).toList()
+    it.toList()
 }
 
 fun inputScanner(name: String) = Scanner(inputFile(name))
